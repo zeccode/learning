@@ -4,24 +4,10 @@
 // depende de outra para funcionar, mas elas ainda são independentes, ou seja, 
 // a existência de uma não depende da outra.
 
-// Tipos de Associação
-// Existem diferentes formas de associação entre classes:
-
 // Associação Simples:
 // Uma classe contém uma referência a outra classe como um atributo, mas não há uma dependência rígida entre elas.
 // Exemplo: Um Cliente que tem um Endereco, onde o Cliente "conhece" o Endereco, 
 //mas ambos podem existir independentemente.
-
-// Agregação:
-// Um tipo mais específico de associação onde uma classe (o "todo") contém referências a outras classes 
-// (as "partes"), mas as partes podem existir independentemente do todo.
-// Exemplo: Um Departamento que tem Funcionarios, onde os Funcionarios são parte do Departamento, 
-// mas eles podem existir fora do Departamento.
-
-// Composição:
-// Uma forma mais forte de associação onde uma classe (o "todo") é responsável pela criação e 
-// destruição das instâncias de outra classe (as "partes"). Se o todo for destruído, as partes também serão.
-// Exemplo: Um Carro que tem um Motor, onde o Motor não pode existir sem o Carro.
 
 // Exemplo de Associação Simples
 // Vamos considerar um exemplo onde temos uma classe Pedido e uma classe Cliente. Um Pedido tem um Cliente associado a ele.
@@ -46,6 +32,7 @@ const pedido1 = new Pedido(123, cliente1);
 pedido1.detalhesPedido(); // Saída: Pedido Nº: 123, Cliente: Michel Araújo
 
 //_________________________________________________________________________________________________
+
 //   Explicação:
 // Associação Simples: 
 // A classe Pedido tem uma associação com a classe Cliente, 
