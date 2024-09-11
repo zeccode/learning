@@ -1,7 +1,4 @@
-    function process(valor: string): string
-    function process(valor: number): number
-    function process(valor: unknown): unknown {
-        if (typeof valor === 'string') return valor.toUpperCase()
-        if (typeof valor === 'number') return valor * valor
+function typeGuardfn(params: unknown): string {
+        return typeof params === 'string' ? params.toUpperCase() : 'error'
     }
-    console.log(process(5))
+    console.log(typeGuardfn('teste'))
