@@ -84,5 +84,18 @@
         age: 30,
         isActive: false,
     }
+    
+    // 8. key of types
+    type ColorsType = typeof colors // Cria um novo tipo baseado na inferencia de types do objeto colors
+    type ColorsNameType = keyof ColorsType // keyof Cria um tipo baseado nas keys do type (ColorsType) do objeto colors
+    const colors = {
+        midnightBlue: '#2C3E50',
+        Turquoise: '#1ABC9C',
+        Sunflower: '#F1C40F',
+        Alizarin: '#E74C3C',
+        Clouds: '#ECF0F1',
+    }
+    const colorsName = [...Object.keys(colors)]
 
-}
+  
+}   
