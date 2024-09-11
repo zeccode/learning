@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "module": "ESNext", // Ou "ES6" dependendo do que você está utilizando
+    "target": "ESNext",
+    "experimentalDecorators": true
+  }
+}
