@@ -37,4 +37,17 @@
         if (typeof valor === 'number') return valor * valor
     }
     console.log(process(5))
+
+    type AdderType = {
+        (x: number): number;
+        (x: number, y: number): number;
+        (x: number, y: number, ...args: Array<number>): number;
+    }
+    
+    const adder: AdderType = (x: number, y?:number, ...args: number[]) => {
+        if (args) return args.reduce((s, v) => s + v, x + (y || 0))
+        return x + (y || 0)
+    }
+
+    console.log(adder(3, 6, 9,5,4,3,2))
 }
