@@ -24,6 +24,21 @@
         return result
     }
     console.log(compare('teste', 'ola'))
+    
+    // outro exemplo: 
+    type objectKeyType = <O, K extends keyof O>(object: O, key: K) => O[K]
+    const getData: objectKeyType = (obj, key) => obj[key] 
+    
+    const animal = {
+        name: 'Rex',
+        type: 'Dog',
+        breed: 'bulldog',
+        color: 'black',
+        vaccines: ['vvaccines 1', 'vvaccines 2', 'vvaccines 3', 'vvaccines 4', 'vvaccines 5']
+    }
+
+    const rexVaccines = getData(animal, "vaccines")
+    console.log(rexVaccines)
 
     // 3. Tipos Genéricos com Herança
     class User<T> {
@@ -48,6 +63,7 @@
     console.log(client.getDatails());
 
     // 4. Generics com Funções Assíncronas
+    // 
     // Generics é muito eficaz para trabalhar com async fuctions, requisicoes a APIs
     async function searchData<T>(url: string): Promise<T> {
         const response = await fetch(url);
@@ -55,7 +71,7 @@
         return data
     }
     async function getUser() {
-        const userData = await searchData<{ id: number, name: string }>('https://google.com.br')
+        const userData = await searchData<{ id: number, name: string }>('https://google.com.br');
         console.log(userData.name)
         const payData = await searchData<{ id: number; value: number }>("https://api.com/produto");
         console.log(payData.value);
@@ -71,23 +87,26 @@
         id: number;
         msg: string;
         sender: T;
-      }
-      
-      function sendNotification<T>(notification: NotificationI<T>) {
+    }
+
+    function sendNotification<T>(notification: NotificationI<T>) {
         console.log(`Enviando notificação para ${JSON.stringify(notification.sender)}`);
-      }
-      
-      interface UserI {
+    }
+
+    interface UserI {
         name: string;
         email: string;
-      }
-      
-      const userNotification: NotificationI<UserI> = {
+    }
+
+    const userNotification: NotificationI<UserI> = {
         id: 1,
         msg: "Você tem uma nova mensagem!",
         sender: { name: "Michel", email: "michel@email.com" },
-      };
-      
-      sendNotification(userNotification);
-      
+    };
+
+    sendNotification(userNotification);
+
+    //   5. Generics com union 
+    const myArray: Array<number | string> = [0, 1, 2, 3, 'quatro', 'cinco']
+
 }
