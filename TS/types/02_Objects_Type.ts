@@ -38,7 +38,7 @@
     };
 
     // 4. Record
-    // Record<K, T> é usado para criar um tipo de objeto com chaves e valores específicos:
+    // Record<K, T> é um Generics default do TS. usado para criar um tipo de objeto com chaves e valores específicos:
     const user: Record<string, unknown> = {
         name: 'Meuname',
         lastName: 'MeuSobrename',
@@ -76,22 +76,31 @@
         age: number;
         isActive: boolean;
     }
+    // Torna todos os atributos do objetos OPCIONAIS
     const partialPeople: Partial<People6> = {
         name: 'Nome da Pessoa',
     }
+    // Torna todos os atributos do objetos OBRIGATÓRIOS
     const requiredPeople: Required<People6> = {
         name: 'Nome da Pessoa',
         age: 30,
         isActive: false,
     }
+    // Torna todos os atributos do objetos APENAS LEITURA
     const readonlyPeople: Readonly<People6> = {
         name: 'Nome da Pessoa',
         age: 30,
         isActive: false,
     }
+    // SELECIONA parte dos atributos tipados para o objeto, passados como 2 parametro do Generic
     const pickPeople: Pick<People6, 'name' | 'age'> = {
         name: 'Nome da Pessoa',
         age: 30,
+    }
+    // EXCLUI parte dos atributos tipados para o objeto, passados como 2 parametro do Generic
+    const OmitPeople: Omit<People6, 'age'> = {
+        name: 'Nome da Pessoa',
+        isActive: true,
     }
     
     // 8. key of types
