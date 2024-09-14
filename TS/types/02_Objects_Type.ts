@@ -84,6 +84,15 @@
         age: 30,
         isActive: false,
     }
+    const readonlyPeople: Readonly<People6> = {
+        name: 'Nome da Pessoa',
+        age: 30,
+        isActive: false,
+    }
+    const pickPeople: Pick<People6, 'name' | 'age'> = {
+        name: 'Nome da Pessoa',
+        age: 30,
+    }
     
     // 8. key of types
     type ColorsType = typeof colors // Cria um novo tipo baseado na inferencia de types do objeto colors

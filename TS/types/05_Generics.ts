@@ -24,11 +24,11 @@
         return result
     }
     console.log(compare('teste', 'ola'))
-    
+
     // outro exemplo: 
     type objectKeyType = <O, K extends keyof O>(object: O, key: K) => O[K]
-    const getData: objectKeyType = (obj, key) => obj[key] 
-    
+    const getData: objectKeyType = (obj, key) => obj[key]
+
     const animal = {
         name: 'Rex',
         type: 'Dog',
@@ -106,7 +106,7 @@
 
     sendNotification(userNotification);
 
-    //   5. Generics com union 
+    //   6. Generics com union 
     const myArray: Array<number | string> = [0, 1, 2, 3, 'quatro', 'cinco']
-
+    console.log(myArray)
 }
