@@ -3,15 +3,10 @@
 // Decorators são uma funcionalidade experimental em TypeScript que permite adicionar metadados, 
 // modificar ou substituir o comportamento de classes, métodos, propriedades ou parâmetros.
 // Eles são uma espécie de “função wrapper” que pode ser aplicada a elementos 
-//da classe para estender ou alterar seu comportamento.
-
+// da classe para estender ou alterar seu comportamento.
 // Decorators são amplamente usados em frameworks como Angular para adicionar funcionalidades de forma declarativa.
 
-function log(
-  target: any,
-  propertyKey: string,
-  descriptor: PropertyDescriptor
-): PropertyDescriptor {
+function log(target: any, propertyKey: string, descriptor: PropertyDescriptor): PropertyDescriptor | void {
   const originalMethod = descriptor.value;
 
   descriptor.value = function (...args: any[]) {

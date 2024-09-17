@@ -20,7 +20,7 @@ abstract class Animal {
   }
 }
 
-class Dog extends Animal {
+export class Dog extends Animal {
   makeSound(): void {
     console.log('Woof! Woof!');
   }
@@ -48,7 +48,7 @@ abstract class Shape {
   }
 }
 
-class Rectangle extends Shape {
+export class Rectangle extends Shape {
   width: number;
   height: number;
 

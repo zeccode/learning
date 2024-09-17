@@ -1,0 +1,8 @@
+# Ignorar diretórios node_modules em qualquer lugar do projeto
+node_modules/
+
+# Ignorar diretórios dist em qualquer lugar do projeto
+dist/
+
+# Ignorar arquivos de log em qualquer lugar do projeto
+*.log

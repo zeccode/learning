@@ -14,7 +14,7 @@ const CanSwim = {
   }
 };
 
-class Animal {
+export class Animal {
   constructor(name) {
     this.name = name;
   }

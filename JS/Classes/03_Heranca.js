@@ -2,7 +2,7 @@
 // Herança é um conceito que permite criar novas classes baseadas em classes existentes, facilitando o reuso de código. 
 // A palavra-chave extends é usada para criar uma subclasse que herda de uma superclasse.
 
-class Animal {
+export class Animal {
     constructor(name) {
         this.name = name;
     }
@@ -12,7 +12,7 @@ class Animal {
     }
 }
 
-class Dog extends Animal {
+export class Dog extends Animal {
     constructor(name, breed) {
         super(name); // Chama o constructor da superclasse
         this.breed = breed;

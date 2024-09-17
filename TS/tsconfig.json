@@ -6,7 +6,9 @@
     "strict": true,
     "moduleResolution": "node",
     "module": "ESNext", // Ou "ES6" dependendo do que você está utilizando
-    "target": "ESNext",
-    "experimentalDecorators": true
-  }
+    "experimentalDecorators": true,
+    "outDir": "./dist",
+    "target": "ES5",
+  },
+  "include": ["src/**/*"]
 }
