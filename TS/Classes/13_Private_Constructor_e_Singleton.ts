@@ -1,7 +1,7 @@
 // Usando tecnicas de Desenvolvimento Singleton da GoF
 // Factory Method da Gof
 
-export default class DataBase {
+class DataBase {
     private static dataBase: DataBase
     private host: string
     private user: string

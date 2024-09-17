@@ -1,4 +1,4 @@
-export default class Pessoa {
+class Pessoa {
     static ageDefault = 0
     static CPFDefault = ''
 
@@ -10,8 +10,8 @@ export default class Pessoa {
     ) { }
 
     metodoTradicionao(): void {
-        if(this.CPF) Pessoa.CPFDefault = this.CPF
-        if(this.age) Pessoa.ageDefault = this.age
+        if (this.CPF) Pessoa.CPFDefault = this.CPF
+        if (this.age) Pessoa.ageDefault = this.age
         console.log(`Pessoa.ageDefault: ${Pessoa.ageDefault}`)
         console.log(`Pessoa.CPFDefault: ${Pessoa.CPFDefault}`)
     }
