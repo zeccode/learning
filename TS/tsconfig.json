@@ -5,7 +5,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "moduleResolution": "node",
-    "module": "ESNext", // Ou "ES6" dependendo do que você está utilizando
+    "module": "ES6", // Ou "ES6" dependendo do que você está utilizando
     "experimentalDecorators": true,
     "outDir": "./dist",
     "target": "ES5",

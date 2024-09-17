@@ -12,7 +12,7 @@ function methodDecoration(
     return descriptor;
 }
 
-class Calculator {
+class CalculatorDecorator {
     // Decorator aplicado ao método 'add'
     // A seguir Ignoramos o erro que o TS aponta, pois é uma funcionalidade ainda nao Homologada 
     // @ts-ignore
@@ -22,5 +22,5 @@ class Calculator {
     }
 }
 
-const calculator = new Calculator();
-console.log(calculator.add(2, 3)); 
+const calculatorDecorator = new CalculatorDecorator();
+console.log(calculatorDecorator.add(2, 3)); 
